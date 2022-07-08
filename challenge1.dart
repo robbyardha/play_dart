@@ -35,7 +35,15 @@ void main() {
   String namapendiri = "Robby Firmansyah Ardha";
   String alamat = "Jl. Sawunggaling Timur Sambikerep Jemundo RT.23 RW.05 No.08";
   int telepon = 081234532144;
-  String statusbuka = "Buka / Tutup";
+  bool statusbuka = true;
+  List<Map> daftarlayanan = [
+    {'layanan': 'Wordpress Website', 'harga': 550000},
+    {'layanan': 'Custom Website', 'harga': 5000000},
+    {'layanan': 'Mobile Android App', 'harga': 8000000},
+    {'layanan': 'Mobile IOS App', 'harga': 10000000},
+    {'layanan': 'Multiplatform App', 'harga': 15000000},
+  ];
+
   Map<String, int> layanan = {
     'Wordpress Website': 550000,
     'Custom Website': 5000000,
@@ -43,10 +51,27 @@ void main() {
     'Mobile IOS App': 10000000,
     'Multiplatform App': 15000000,
   };
+
+  List<Map> listproduk = [
+    {'produk': 'Sistem Informasi Akademik', 'harga': 500000},
+    {'produk': 'Sistem Enterprise', 'harga': 2500000},
+    {'produk': 'Sistem Penggajian Karyawan', 'harga': 3500000},
+  ];
   Map<String, int> produk = {
     'Sistem Informasi Akademik': 500000,
     'Sistem Enterprise': 2500000,
     'Sistem Penggajian Karyawan': 3500000,
+  };
+
+  Map company = {
+    'nama_company': namacompany,
+    'tahun': tahunberdiri,
+    'pendiri': namapendiri,
+    'alamat': alamat,
+    'notlp': telepon,
+    'statusbuka': statusbuka,
+    'layanan': daftarlayanan,
+    'produk': listproduk
   };
 
   print("Nama Company : ${namacompany}");
@@ -57,4 +82,7 @@ void main() {
   print("Status Buka : ${statusbuka}");
   print("Layanan Kami : ${layanan}");
   print("Produk Kami : ${produk}");
+
+  print("Company");
+  print(company);
 }
