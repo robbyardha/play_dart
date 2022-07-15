@@ -63,4 +63,17 @@ void main() {
       print("Invalid");
       break;
   }
+
+  // Ternary
+  print((nilai >= 91 && nilai <= 100)
+      ? 'Sangat Baik'
+      : (nilai <= 90 && nilai >= 81)
+          ? 'Baik'
+          : (nilai <= 80 && nilai >= 71)
+              ? 'Cukup'
+              : (nilai <= 70 && nilai >= 61)
+                  ? 'Kurang'
+                  : (nilai <= 60 && nilai >= 0)
+                      ? 'Sangat Kurang'
+                      : 'Invalid');
 }
